@@ -1,8 +1,5 @@
-class Algos::Searchings::LinearsController < ApplicationController  
-  def index    
-  end
-  
-  def demo
-    render :text => "hello world"
+class Algos::Searchings::LinearsController < ApplicationController
+  def index
+    @output = 'hello world' 
   end
 end

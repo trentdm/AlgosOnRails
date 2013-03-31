@@ -58,8 +58,6 @@ Algos::Application.routes.draw do
   namespace :algos do
     namespace :searchings do
       resources :linears, :only => :index
-      
-      get '/linears/demo'
     end
   end
   
