@@ -1,7 +1,4 @@
 Algos::Application.routes.draw do
-  get "linear/index"
-
-  get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -55,8 +52,12 @@ Algos::Application.routes.draw do
   root :to => 'home#index'
   
   namespace :algos do
-    namespace :searching do
-      resources :linear
+    resources :searchings, :only => :index
+  end
+  
+  namespace :algos do
+    namespace :searchings do
+      resources :linears, :only => :index
     end
   end
 
