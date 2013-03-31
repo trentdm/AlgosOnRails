@@ -18,6 +18,7 @@ test:
   pool: 5
   timeout: 5000
 
+#real connection string is different, but not included in src
 production:
   adapter: sqlite3
   database: db/production.sqlite3
