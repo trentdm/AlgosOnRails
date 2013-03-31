@@ -52,14 +52,17 @@ Algos::Application.routes.draw do
   root :to => 'home#index'
   
   namespace :algos do
-    resources :searchings, :only => :index
+    resources :searchings, :only => :index 
   end
   
   namespace :algos do
     namespace :searchings do
       resources :linears, :only => :index
+      
+      get '/linears/demo'
     end
   end
+  
 
   # See how all your routes lay out with "rake routes"
 
