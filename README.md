@@ -7,6 +7,8 @@ I know the two objectives don't really mix, but it seems like a good excuse to f
 
 ToDo:
 
+- Demonstrate more algorithms
+
 - Reflect code for algorithms, rather than copy strings
 
 - Use forms for input and params on algorithms

@@ -5,5 +5,4 @@ class Algos::Searchings::LinearsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
   end
-
 end
