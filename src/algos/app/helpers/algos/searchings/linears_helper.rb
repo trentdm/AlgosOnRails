@@ -1,5 +1,5 @@
 module Algos::Searchings::LinearsHelper
-  def search(input, param)
+  def search_linear(input, param)
     output = String.new()
     match = '<b>' + param + '</b>'
     added = 0

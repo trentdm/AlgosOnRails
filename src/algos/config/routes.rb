@@ -57,7 +57,7 @@ Algos::Application.routes.draw do
   
   namespace :algos do
     namespace :searchings do
-      resources :linears, :only => :index
+      resources :linears, :binarys, :only => :index
     end
   end
   
