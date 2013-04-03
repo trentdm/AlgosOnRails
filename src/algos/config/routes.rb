@@ -52,12 +52,15 @@ Algos::Application.routes.draw do
   root :to => 'home#index'
   
   namespace :algos do
-    resources :searchings, :only => :index 
+    resources :searchings, :sortings, :only => :index 
   end
   
   namespace :algos do
     namespace :searchings do
       resources :linears, :binarys, :only => :index
+    end
+    namespace :sortings do
+      resources :bubbles, :quicksorts, :only => :index
     end
   end
   
