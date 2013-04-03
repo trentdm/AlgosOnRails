@@ -5,6 +5,6 @@ class Algos::Sortings::QuicksortsHelperTest < ActionView::TestCase
     input = "6, 10, 3, -1, -10, -9, -7, 1, -6, 8, 4, 5, 7, -2, 3, 9, -1, 2, -5, 0"
     param = ''
     result = sort_quicksort(input)
-    assert result == 99
+    assert result == "-10, -9, -7, -6, -5, -2, -1, -1, 0, 1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10"
   end 
 end
