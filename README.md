@@ -11,4 +11,4 @@ ToDo:
 
 - Reflect code for algorithms, rather than copy strings
 
-- Use forms for input and params on algorithms
+- Use forms for input and params on algorithms and/or allow randomization of inputs
