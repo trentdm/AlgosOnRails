@@ -12,11 +12,9 @@ class Algos::Searchings::LinearsController < ApplicationController
       if getIsMatch(i, input, param)
         output += match
         added += param.size
-      else        
-        if added <= i
-          output += input[i]
-          added += 1
-        end        
+      elsif added <= i
+        output += input[i]
+        added += 1
       end
     end    
     

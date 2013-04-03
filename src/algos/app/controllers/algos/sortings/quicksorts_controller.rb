@@ -11,7 +11,7 @@ class Algos::Sortings::QuicksortsController < ApplicationController
   
   private
   def quicksort(input) 
-    if input.size < 2
+    if input.size <= 1
       return input
     end 
     
@@ -44,9 +44,7 @@ class Algos::Sortings::QuicksortsController < ApplicationController
     input_low = quicksort(input_low)
     input_high = quicksort(input_high)
     
-    input = input_low.concat(input_high)
-    
-    return input
+    return input_low.concat(input_high)
   end"
   end
 end
