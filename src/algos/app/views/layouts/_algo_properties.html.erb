@@ -1,8 +1,15 @@
+<dl class='dl-horizontal'>
 <%= form_for @properties, :url => { :action => "index"}, 
-	:html => {:class => "dl-horizontal", :method => "get" } do |f| %>
-	<%= f.text_field :input %>
-	<%= f.text_field :parameter %>
-	<%= f.text_field :output %>
-	<%= f.text_field :code %>
-	<%= f.submit "Go" %>
+	:html => {:method => "get" } do |f| %>
+	<dt>Input</dt>
+	<dd><%= f.text_field :input %></dd>
+	<dt>Parameter</dt>
+	<dd><%= f.text_field :parameter %></dd>
+	<dt>Output</dt>
+	<dd><%= f.text_field :output %></dd>
+	<dt>Code</dt>
+	<dd><%= f.text_area :code, :size => "60x12" %></dd>
+	<dt>Submit</dt>
+	<dd><%= f.submit "Submit" %></dd>	
 <% end %>
+</dl>
