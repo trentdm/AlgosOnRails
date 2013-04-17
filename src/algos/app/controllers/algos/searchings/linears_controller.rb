@@ -1,9 +1,17 @@
 class Algos::Searchings::LinearsController < ApplicationController
   def index
-    @input = "Sally sells sea shells by the sea shore."
-    @parameter = "se"
-    @output = view_context.search_linear(@input, @parameter)
-    @code = "def search_linear(input, param)
+    @properties = AlgoProperties.new
+      
+    if !params[:algo_properties].nil?
+      @properties.input = params[:algo_properties][:input]
+      @properties.parameter = params[:algo_properties][:parameter]
+    elsif
+      @properties.input = "Sally sells sea shells by the sea shore."
+      @properties.parameter = "se"
+    end
+    
+    @properties.output = view_context.search_linear(@properties.input, @properties.parameter)
+    @properties.code = "def search_linear(input, param)
     output = String.new()
     match = '<b>' + param + '</b>'
     added = 0

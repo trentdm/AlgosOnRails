@@ -7,7 +7,7 @@ module Algos::Searchings::BinarysHelper
   
   private
   def search_binary_recursive(input, param, min, max, middle)
-    if input[middle] == param
+    if input[middle] == param or min == max
      return middle
     elsif input[middle] < param
       min = middle

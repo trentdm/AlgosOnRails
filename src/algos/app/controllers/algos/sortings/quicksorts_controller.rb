@@ -5,13 +5,12 @@ class Algos::Sortings::QuicksortsController < ApplicationController
     if !params[:algo_properties].nil?
       @properties.input = params[:algo_properties][:input]
       @properties.parameter = params[:algo_properties][:parameter]
-      @properties.output = view_context.sort_quicksort(@properties.input)
     elsif
       @properties.input = "6, 10, 3, -1, -10, -9, -7, 1, -6, 8, 4, 5, 7, -2, 3, 9, -1, 2, -5, 0"
-      @properties.parameter = 'None'
-      @properties.output = view_context.sort_quicksort(@properties.input)
+      @properties.parameter = 'None'      
     end
     
+    @properties.output = view_context.sort_quicksort(@properties.input)
     @properties.code = "def sort_quicksort(input)
     input = input.delete(' ').split(',').map(&:to_i)    
     input = quicksort(input)    

@@ -18,6 +18,9 @@ Algos::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
+  # Fill timestamp when creating records, so tests dont fail on not nullable column
+  config.active_record.record_timestamps = true
+
   # Raise exceptions instead of rendering exception templates
   config.action_dispatch.show_exceptions = false
 
